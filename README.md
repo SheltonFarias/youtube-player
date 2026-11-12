@@ -29,6 +29,8 @@ Parâmetros: `video` = ID do vídeo; `start` e `end` = segundos; `loop=1` = repe
 
 ## Limitações
 
+- O player usa uma interface simplificada, sem os controles internos do YouTube. Use os botões abaixo do vídeo. O logo, o título e outras sobreposições do YouTube ainda podem aparecer; `rel=0` restringe sugestões ao mesmo canal, sem eliminá-las.
+
 - A reprodução começa após clique. Navegadores e o Notion podem restringir reprodução, cookies ou incorporações; se necessário, abra o player em outra aba.
 - Vídeos privados, removidos, com restrição de idade ou com incorporação desativada podem não funcionar. O link **Abrir no YouTube** é uma alternativa, sem o loop personalizado.
 - O limite do trecho é verificado por JavaScript a cada 100 ms; não é edição precisa por quadro e pode atrasar em abas inativas ou aparelhos ocupados.

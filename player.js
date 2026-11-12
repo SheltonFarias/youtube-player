@@ -30,7 +30,7 @@ try {
   window.onYouTubeIframeAPIReady = () => {
     player = new window.YT.Player('player', {
       width: '100%', height: '100%', videoId: config.video,
-      playerVars: { playsinline: 1, start: Math.floor(config.start), origin: location.origin },
+      playerVars: { playsinline: 1, controls: 0, iv_load_policy: 3, rel: 0, start: Math.floor(config.start), origin: location.origin },
       events: {
         onReady: () => {
           const duration = player.getDuration();
