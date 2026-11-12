@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Estudo em loop · Gerador</title><link rel="stylesheet" href="style.css">
+</head>
+<body><main>
+  <header><span class="eyebrow">ESTUDO TÉCNICO / JIU-JITSU</span><h1>Uma técnica.<br>Quantas repetições precisar.</h1><p>Escolha um trecho do YouTube e leve o player para suas anotações no Notion.</p></header>
+  <form id="generator" class="card">
+    <label for="video">Link ou ID do vídeo</label><input id="video" required placeholder="https://www.youtube.com/watch?v=…" autocomplete="off">
+    <label for="title">Nome da técnica <span>(opcional)</span></label><input id="title" maxlength="120" placeholder="Ex.: Knee Cut — controle do quadril">
+    <div class="grid"><div><label for="start">Início</label><input id="start" value="0:00" required inputmode="decimal"></div><div><label for="end">Fim</label><input id="end" placeholder="Ex.: 3:10" required inputmode="decimal"></div></div>
+    <p class="hint">Use segundos (150), minutos (2:30) ou horas (1:02:30).</p>
+    <label class="check"><input id="loop" type="checkbox" checked> Repetir o trecho automaticamente</label>
+    <button type="submit">Gerar link para o Notion →</button><p id="message" role="status" aria-live="polite"></p>
+  </form>
+  <section id="result" class="card" hidden><h2>Seu trecho está pronto</h2><label for="output">Link para incorporar</label><input id="output" readonly><div class="actions"><button id="copy" type="button">Copiar link</button><a id="open" class="button secondary" target="_blank" rel="noopener">Abrir player ↗</a></div><p>No Notion, digite <strong>/embed</strong>, cole este link e selecione <strong>Incorporar link</strong>.</p></section>
+  <footer>Você só precisa publicar uma vez. Cada trecho ganha seu próprio link.</footer>
+</main><script type="module" src="generator.js"></script></body></html>
